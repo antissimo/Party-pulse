@@ -1,4 +1,4 @@
-import { Register,Login } from "./main.js";
+import { Register,Login } from "./LoginRegister.js";
 
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('registerButton').addEventListener("click",()=>(Register()));
