@@ -1,0 +1,35 @@
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #fff;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+.event {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.event img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: #800080;
+}
+
+p {
+    color: #555;
+}
