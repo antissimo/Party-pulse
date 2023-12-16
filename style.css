@@ -1,0 +1,93 @@
+body {
+    background: linear-gradient(to bottom, #ffffff 0%, #9999ff 100%); /* Neutral background color */
+    color: #6a0dad; /* Purple text color */
+    font-family: 'cursive', cursive; /* Use cursive font */
+    display: flex;
+    flex-direction: column; /* Arrange child elements vertically */
+    align-items: center; /* Center-align child elements horizontally */
+    justify-content: center; /* Center-align child elements vertically */
+    height: 100vh; /* Make the body take up the full height of the viewport */
+    margin: 20px; /* Add margin to create space between content and frame */
+    border: 5px solid #61174a; /* Border style */
+    padding: 10px; /* Padding inside the frame */
+    height: auto;
+    /* Set the background color to add transparency */
+    /* Adjust the last value (0.7) for transparency */
+  
+    /* Set the opacity of the entire page */
+    opacity: 0.9; /* Adjust this value for overall transparency */
+    animation: changeColor 3s linear infinite; /* Constant color animation */
+    }
+
+    @keyframes changeColor {
+      0% {
+        border-color: #d7cccc;
+      }
+      50% {
+        border-color: #763e76; /* Magenta color */
+      }
+      100% {
+        border-color:  #d2afaf;
+      }
+    }
+  
+  /* You can customize the styles for other elements as needed */
+  h1, h2, h3 {
+    color: #4d0082; /* Darker purple for headings */
+    margin-bottom: 10px; /* Add bottom margin to headings */
+  }
+  
+  a {
+    color: #800080; /* Purple color for links */
+  }
+  button {
+    background-color: #800080; /* Purple background color */
+    color: #ffffff; /* White text color */
+    padding: 10px 20px; /* Padding for the buttons */
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Add a slight border-radius for rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    font-family: 'cursive', cursive; /* Use cursive font */
+    font-size: 16px; /* Set font size */
+    margin: 5px; /* Add margin for spacing between buttons */
+    cursor: pointer;
+    transition: background-color 0.3s; 
+  }
+  
+  /* Button hover effect */
+  button:hover {
+    background-color: #6a0dad; /* Darker purple on hover */
+  }  
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 23%;
+    height: 23%;
+  }
+
+  input {
+    padding: 10px; /* Padding for the input fields */
+    border: 2px solid #800080; /* Purple border */
+    border-radius: 5px; /* Add a slight border-radius for rounded corners */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    font-family: 'cursive', cursive; /* Use cursive font */
+    font-size: 16px; /* Set font size */
+    margin-bottom: 10px; /* Add bottom margin for spacing between inputs */
+  }
+  
+  /* Input focus styles */
+  input:focus {
+    outline: none; /* Remove default focus outline */
+    border-color: #6a0dad; /* Change border color on focus */
+  }
+
+  #map {
+    /* Style the map container */
+    width: 100%; /* Set the width of the map */
+    height: 600px; /* Set the height of the map */
+    border: 1px solid #ccc; /* Add a border for visibility */
+  
+    /* Add any other styles you need for the map container */
+  }

@@ -1,0 +1,10 @@
+{
+    "clubs": [
+        {"name": "Vanilla Club","lat":43.521815,"lon":16.4319775, "image":"slikeProjekt/vanilla.jpg", "adresa":"Osmih mediteranskih igara 21"},
+        {"name":"Kauri Club","lat":43.50833,"lon":16.47156, "image":"slikeProjekt/kauri.jpg", "adresa":"Poljička cesta 39"},
+        {"name":"Club 305 A.D.","lat":43.50961,"lon":16.43747, "image":"slikeProjekt/305.jpg", "adresa":"Trogirska ul. 7"},
+        {"name":"Velvet Club","lat":43.52229,"lon":16.43402, "image":"slikeProjekt/velvet.jpg", "adresa":"Put Supavla 1A"},
+        {"name":"Carpe Diem","lat":43.6253, "lon": 16.73775, "image":"slikeProjekt/carpe-diem.jpg", "adresa":"D220 Trilj"},
+        {"name":"Ritz Club","lat":45.8015, "lon": 15.961235, "image":"slikeProjekt/ritz.jpg", "adresa":"Ul. Florijana Andrašeca 14"}
+    ]
+}
