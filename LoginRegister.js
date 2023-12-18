@@ -56,7 +56,7 @@ function registerSubmitButton_onClick(){
                 email : document.getElementById('registerEmail').value,
                 password : hash}
 
-                RegisterUser(data); // Ode mora ic POST call
+            RegisterUser(data); // Ode mora ic POST call
             Application._registering = false;
             Application._user = new User();
             Application._user.ConstructFromData(data);
