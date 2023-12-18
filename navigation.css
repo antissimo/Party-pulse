@@ -1,5 +1,9 @@
 /* Style the container */
 .tabs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
     overflow: hidden;
     background-color: #f2f2f2;
     position: fixed;
@@ -10,6 +14,8 @@
   
   /* Style the navigation buttons */
   .navButtons {
+    width: 200px;
+    margin: 5px; 
     background-color: transparent;
     border: none;
     outline: none;
