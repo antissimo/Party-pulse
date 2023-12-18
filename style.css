@@ -11,6 +11,8 @@ body {
     border: 5px solid #61174a; /* Border style */
     padding: 10px; /* Padding inside the frame */
     height: auto;
+    font-family: Arial, sans-serif;
+    margin-top: 55px;
     /* Set the background color to add transparency */
     /* Adjust the last value (0.7) for transparency */
   
@@ -47,8 +49,6 @@ body {
     border: none; /* Remove button border */
     border-radius: 5px; /* Add a slight border-radius for rounded corners */
     cursor: pointer; /* Change cursor to pointer on hover */
-    font-family: 'cursive', cursive; /* Use cursive font */
-    font-size: 16px; /* Set font size */
     margin: 5px; /* Add margin for spacing between buttons */
     cursor: pointer;
     transition: background-color 0.3s; 
@@ -72,8 +72,6 @@ body {
     border: 2px solid #800080; /* Purple border */
     border-radius: 5px; /* Add a slight border-radius for rounded corners */
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    font-family: 'cursive', cursive; /* Use cursive font */
-    font-size: 16px; /* Set font size */
     margin-bottom: 10px; /* Add bottom margin for spacing between inputs */
   }
   
