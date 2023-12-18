@@ -13,9 +13,9 @@
 
 <body>
     <div class="tabs">
-        <button class="navButtons" id = "myAccountNav">My Account</button>
-        <button class="navButtons" id = "findClubNav">Find Club</button>
-        <button class="navButtons" id = "blank">Blank</button>
+        <button class="navButtons myAccountNav" onclick="window.location.href='./user.html'">My Account</button>
+        <button class="navButtons findClubNav" onclick="window.location.href='./findclubs.html'">Find Club</button>
+        <button class="navButtons findEvent" onclick="window.location.href='./findEvent.html'">Find event</button>
     </div>
 
 
@@ -28,5 +28,6 @@
 <script type="module" src='./startup.js'></script>
 <script type="module" src='./LoginRegister.js'></script>
 <script type="module" src='./application.js'></script>
+<script type="module"  src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
 </html>

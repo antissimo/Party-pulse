@@ -2,7 +2,7 @@ import { Application } from "./application.js";
 import {Show,Hide,CreateDiv,CreateInput,CreateForm, CreateTextLabel,CreateButton,sha256, typesOfUsers,Remove} from "./helper.js";
 import { User } from "./user.js";
 import { GenerateMainApp } from "./mainApp.js";
-
+import {RegisterUser} from "./repository.js"; 
 export function Register(){
     if (Application._registering)
         return;
@@ -56,7 +56,7 @@ function registerSubmitButton_onClick(){
                 email : document.getElementById('registerEmail').value,
                 password : hash}
 
-            console.log(data); // Ode mora ic POST call
+                RegisterUser(data); // Ode mora ic POST call
             Application._registering = false;
             Application._user = new User();
             Application._user.ConstructFromData(data);
@@ -81,11 +81,8 @@ function loginSubmitButton_onClick(){
         const data = {
             username : document.getElementById('loginUsername').value,
             password : hash}
-        var user = checkLoginCreds(data);
-        if (user){
+        if(checkLoginCreds(data)){
             Application._loggingIn = false;
-            Application._user = user;
-
             var form = document.getElementById('loginForm');
             form.childNodes.forEach(el => el.remove());
             form.remove();
@@ -94,8 +91,6 @@ function loginSubmitButton_onClick(){
             Remove('loginContainer');
             Remove('loginButton');
             Remove('registerButton');
-
-
             GenerateMainApp();
         }else{
             alert("Krivo korisnicko ime ili lozinka");
@@ -106,10 +101,10 @@ function loginSubmitButton_onClick(){
 }
 
 function checkLoginCreds(data){
-    //Ode triba ic nekakav login call na api
-    //Samo privremeni kod
-    var user = new User();
-    user.ConstructFromData(data);
-    return user;
-    //return null;
+    var user = Application._Users.find(u => u.username==data.username && u.password == data.password);
+    if (user){
+        Application._user = user;
+        return true;
+    }
+    return false;
 }
