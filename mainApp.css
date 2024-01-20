@@ -1,0 +1,29 @@
+/* CSS for the pulsating effect */
+@keyframes pulse {
+  0% {
+      transform: scale(0.8);
+  }
+  35% {
+      transform: scale(1.1);
+  }
+  45% {
+    transform: scale(1);
+  }
+  55% {
+    transform: scale(1.1);
+  }
+  65% {
+    transform: scale(1);
+  } 
+  75% {
+    transform: scale(1.1);
+  } 
+  100% {
+      transform: scale(0.8);
+  }
+}
+
+/* Apply the animation to the image with the pulsate class */
+.pulsate {
+  animation: pulse 2s infinite; /* Adjust animation duration as needed */
+}

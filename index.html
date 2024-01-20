@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Party pulse</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./LoginRegister.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./navigation.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./mainApp.css'>
+</head>
+
+<body>
+    <div class="tabs">
+        <button class="navButtons myAccountNav" onclick="window.location.href='./user.html'">My Account</button>
+        <button class="navButtons findClubNav" onclick="window.location.href='./findclubs.html'">Find Club</button>
+        <button class="navButtons findEvent" onclick="window.location.href='./FindEvent.html'">Find event</button>
+    </div>
+
+
+    <div id="loginContainer">
+
+        <button class="loginButtons" id="registerButton">Register</button>
+        <button class="loginButtons" id="loginButton">Login</button>
+    </div>
+</body>
+<script type="module" src='./startup.js'></script>
+<script type="module" src='./LoginRegister.js'></script>
+<script type="module" src='./application.js'></script>
+<script type="module"  src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</html>

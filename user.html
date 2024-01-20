@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account</title>
+
+    <link rel="stylesheet" href="user.css">
+    <link rel='stylesheet' type='text/css' media='screen' href='./navigation.css'>
+
+</head>
+<body>
+    <div class="tabs">
+        <button class="navButtons myAccountNav" onclick="window.location.href='./user.html'">My Account</button>
+        <button class="navButtons findClubNav" onclick="window.location.href='./findclubs.html'">Find Club</button>
+        <button class="navButtons findEvent" onclick="window.location.href='./findEvent.html'">Find event</button>
+    </div>
+    <div id="container">
+        <h2>My Account</h2>
+        <form id="accountForm">
+            <div id="profileImageContainer">
+                <img id="profileImage" src="./pictures/facebook-default-profile-picture.webp" alt="Profile Image">
+                <img id="changeImage" src="./pictures/WhatsApp Image 2023-12-16 at 16.15.23 (1).jpeg">
+                <div class="hide">Change profile picture</div>
+            </div>
+
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" placeholder="Enter your first name">
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Enter your last name">
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your e-mail">
+
+            <button id="saveChangesButton" type="button" onclick="updateAccount()">Save Changes</button>
+        </form>
+    </div>
+
+    <script>
+        import {Application} from './application.js'
+
+        button.addEventListener('click', updateAccount);
+
+        function updateAccount() {
+            var button = document.getElementById('saveChangesButton');
+            button.classList.add('clicked');
+
+            var firstName = document.getElementById('firstName').value;
+            var lastName = document.getElementById('lastName').value;
+            var email = document.getElementById('email').value;
+
+            console.log("First Name:", firstName);
+            console.log("Last Name:", lastName);
+            console.log("Email:", email);
+
+        }
+
+        function changeProfileImage() {
+            console.log("Change profile image clicked");
+        }
+
+
+    </script>
+</body>
+</html>
