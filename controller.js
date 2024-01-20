@@ -7,5 +7,4 @@ fetch("data.json")
         s += data.clubs[i].name;
         s += "<br>";
     }
-    document.getElementById("myData").innerHTML = s;
-})
+    document.getElementById("myData").innerHTML = s;})

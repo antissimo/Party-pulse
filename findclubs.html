@@ -1,49 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Google Maps</title>
-  <!--<script src="https://maps.googleapis.com/maps/api/js?key=VAŠ_API_KLJUČ&callback=initMap" 
-  async defer></script>-->
-  <script type="module" src="./myscript.js"></script>
-  <script type="module" src="./clubs.js"></script>
-  <script src="./data.json"></script>
-  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-cpD5lOGA9L1tRsLHBoi1kbb/JaLsf2BxX4COilA3BEcVI8vm+aWso7PVAb4UEE5fPnHb4U2egY+Z9HU1AjypQSg==" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Maps</title>
+    <!--<script src="https://maps.googleapis.com/maps/api/js?key=VAŠ_API_KLJUČ&callback=initMap" 
+    async defer></script>-->
+    <script type="module" src="./myscript.js"></script>
+    <script type="module" src="./clubs.js"></script>
+    <script src="./data.json"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-cpD5lOGA9L1tRsLHBoi1kbb/JaLsf2BxX4COilA3BEcVI8vm+aWso7PVAb4UEE5fPnHb4U2egY+Z9HU1AjypQSg==" crossorigin="anonymous"></script>
 
 
-  <link rel='stylesheet' type='text/css' media='screen' href='./style.css'>
-  <link rel='stylesheet' type='text/css' media='screen' href='./navigation.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./style.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./navigation.css'>
 
-</head>
-<body>
-  <div class="tabs">
-    <button class="navButtons myAccountNav" onclick="window.location.href='./user.html'">My Account</button>
-    <button class="navButtons findClubNav" onclick="window.location.href='./findclubs.html'">Find Club</button>
-    <button class="navButtons findEvent" onclick="window.location.href='./findEvent.html'">Find event</button>
-</div>
-   <input type="text" id="udaljenost" placeholder="Insert wanted radius">
-   <button type="button" id="pokazi">Show</button>
-   <br>
-  
- <!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92589.14974634413!2d16.37668659799397!3d43.514622863381746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13355dfc6bbcf517%3A0xa1798ff631b49f98!2sSplit!5e0!3m2!1shr!2shr!4v1702500114148!5m2!1shr!2shr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>-->
+  </head>
 
-  <div id="map"></div>
-  <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbpihDWHeBDbHY2wrcEFq5AQi1iPK_984&callback=initMap&v=weekly"
-    defer>
-  </script>
+  <body>
+    <div class="tabs">
+      <button class="navButtons myAccountNav" onclick="window.location.href='./user.html'">My Account</button>
+      <button class="navButtons findClubNav" onclick="window.location.href='./findclubs.html'">Find Club</button>
+      <button class="navButtons findEvent" onclick="window.location.href='./findEvent.html'">Find event</button>
+    </div>
 
+    <input type="text" id="udaljenost" placeholder="Insert wanted radius">
+    <button type="button" id="pokazi">Show</button>
+    <br>
+    
+  <!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92589.14974634413!2d16.37668659799397!3d43.514622863381746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13355dfc6bbcf517%3A0xa1798ff631b49f98!2sSplit!5e0!3m2!1shr!2shr!4v1702500114148!5m2!1shr!2shr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>-->
 
-<p id="demo">Click the button to get your location.</p>
-
-<button type="button" id="pronadi"> Get Location</button>
-<br>
-<div id="klub" onclick="prikaziInformacije()"></div>
-
-<div id="myData"></div>
-
-<div id="clubs-list"></div>
+    <div id="map"></div>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbpihDWHeBDbHY2wrcEFq5AQi1iPK_984&callback=initMap&v=weekly"
+      defer>
+    </script>
 
 
+    <p id="demo">Click the button to get your location.</p>
+
+    <button type="button" id="pronadi"> Get Location</button>
+    <br>
+    <div id="klub" onclick="prikaziInformacije()"></div>
+
+    <div id="myData"></div>
+
+    <div id="clubs-list"></div>
+
+
+  </body>
 </html>
