@@ -1,0 +1,85 @@
+/* Reset some default styles for better consistency */
+body, h1, h2, p, div, form, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Set some basic styles for the body */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  /* Container for the whole page */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Style for the tabs container */
+  .tab {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: lightpink;
+    padding: 10px;
+    color: #fff;
+  }
+  
+  /* Style for the buttons container */
+  .buttons-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  /* Style for individual buttons */
+  #eventButton {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color:#800080 ;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  #clubButton{
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #800080;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Style for the forms container */
+  .forms {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  /* Style for the clubform on the right */
+  .clubform {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  /* Style for the eventform on the left */
+  .eventform {
+    flex: 1;
+    margin-left: 10px;
+  }
+  
+  /* Add more specific styles to your forms, buttons, etc. as needed */
+  .tablinks{
+    padding: 5px 10px;
+    margin: 0 5px;
+    background-color:#800080 ;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
