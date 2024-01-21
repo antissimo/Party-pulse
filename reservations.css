@@ -1,0 +1,71 @@
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-image: url("booking.jpg");
+    color: black;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+
+  .container {
+    text-align: center;
+  }
+  
+  button, input, select, textarea {
+    padding: 12px;
+    margin: 8px;
+    border: 2px solid #555;
+    border-radius: 6px;
+    background-color: #f1f1f1;
+    color: black;
+    font-size: 16px;
+    outline: none;
+  }
+
+  label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+    color: black;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: larger;
+}
+  
+  button {
+    cursor: pointer;
+    background-color: #585858;
+    color: #fff;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #b6a9a9;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+  
+  ul li {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+  }
+  
+  #a {
+    background-color: #e0e0e0;
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  
