@@ -42,10 +42,11 @@ function submitClubFun(){
         clubPriceList:clubPriceListtmp,
         clubDescription:clubDescriptiontmp
     }
+    console.log(clubtmp);
     clubList.push(clubtmp);
     window.alert("Club sucessfuly added!")
     document.getElementById("clubform").reset();
-    return console.log(clubList);
+    return clubList;
 }
 function submitEventFun(){
     let eventNametmp=document.getElementById("eventname").value;

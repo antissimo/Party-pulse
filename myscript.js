@@ -40,14 +40,57 @@ function createClubCard(data, parentDiv) {
 const jsonString = `
 {
   "clubs": [
-    {"name": "Vanilla Club","lat":43.521815,"lon":16.4319775, "image":"slikeProjekt/vanilla.jpg", "adresa":"Osmih mediteranskih igara 21","desc":"Klub Vanilla u Splitu je popularna noćna destinacija s centralnom lokacijom. Moderni ambijent, raznolik glazbeni program i suvremeni dizajn čine ga privlačnim mjestom za provod. Bogat izbor pića, koktela te redoviti tematski događaji dodaju dinamiku klupskom iskustvu. Posjetitelji mogu očekivati ugodnu atmosferu, profesionalne barmene i raznovrsne glazbene žanrove. Klub Vanilla često organizira posebne događaje, čineći svaki posjet jedinstvenim."},
-    {"name":"Kauri Club","lat":43.50833,"lon":16.47156, "image":"slikeProjekt/kauri.jpg", "adresa":"Poljička cesta 39"},
-    {"name":"Club 305 A.D.","lat":43.50961,"lon":16.43747, "image":"slikeProjekt/305.jpg", "adresa":"Trogirska ul. 7"},
-    {"name":"Velvet Club","lat":43.52229,"lon":16.43402, "image":"slikeProjekt/velvet.jpg", "adresa":"Put Supavla 1A"},
-    {"name":"Carpe Diem","lat":43.6253, "lon": 16.73775, "image":"slikeProjekt/carpe-diem.jpg", "adresa":"D220 Trilj"},
-    {"name":"Ritz Club","lat":45.8015, "lon": 15.961235, "image":"slikeProjekt/ritz.jpg", "adresa":"Ul. Florijana Andrašeca 14"}
+    {
+      "name": "Vanilla Club",
+      "lat": 43.521815,
+      "lon": 16.4319775,
+      "image": "slikeProjekt/vanilla.jpg",
+      "address": "Osmih mediteranskih igara 21",
+      "desc": "Vanilla Club in Split is a popular nightlife destination with a central location. Modern ambiance, diverse music program, and contemporary design make it an attractive place to spend time. A rich selection of drinks, cocktails, and regular themed events add dynamism to the club experience. Visitors can expect a pleasant atmosphere, professional bartenders, and a variety of music genres. Vanilla Club often organizes special events, making each visit unique."
+    },
+    {
+      "name": "Kauri Club",
+      "lat": 43.50833,
+      "lon": 16.47156,
+      "image": "slikeProjekt/kauri.jpg",
+      "address": "Poljička cesta 39",
+      "desc": "Kauri Club, located at Poljička cesta 39, offers a vibrant nightlife experience. With its stylish setting and diverse music selection, Kauri Club attracts partygoers seeking an exciting night out. The club provides a lively atmosphere, and it is a great place to enjoy music, drinks, and good company."
+    },
+    {
+      "name": "Club 305 A.D.",
+      "lat": 43.50961,
+      "lon": 16.43747,
+      "image": "slikeProjekt/305.jpg",
+      "address": "Trogirska ul. 7",
+      "desc": "Club 305 A.D., situated at Trogirska ul. 7, is a dynamic nightlife venue in Split. Offering a unique ambiance and a variety of music genres, the club caters to different tastes. With its central location, Club 305 A.D. is an ideal spot for a night of entertainment, featuring energetic beats and a lively crowd."
+    },
+    {
+      "name": "Velvet Club",
+      "lat": 43.52229,
+      "lon": 16.43402,
+      "image": "slikeProjekt/velvet.jpg",
+      "address": "Put Supavla 1A",
+      "desc": "Velvet Club, located at Put Supavla 1A, is a stylish nightclub in Split known for its sophisticated atmosphere. The club boasts a modern design and a curated music selection, making it a popular choice for those seeking an upscale nightlife experience. With its central location, Velvet Club is a great destination for a night of class and entertainment."
+    },
+    {
+      "name": "Carpe Diem",
+      "lat": 43.6253,
+      "lon": 16.73775,
+      "image": "slikeProjekt/carpe-diem.jpg",
+      "address": "D220 Trilj",
+      "desc": "Carpe Diem, located at D220 Trilj, is a unique club offering a distinctive atmosphere. Known for its scenic location and diverse events, Carpe Diem provides a memorable nightlife experience. The club combines great music, creative cocktails, and a picturesque setting, making it a go-to destination for those looking for a one-of-a-kind night out."
+    },
+    {
+      "name": "Ritz Club",
+      "lat": 45.8015,
+      "lon": 15.961235,
+      "image": "slikeProjekt/ritz.jpg",
+      "address": "Ul. Florijana Andrašeca 14",
+      "desc": "Ritz Club, situated at Ul. Florijana Andrašeca 14, is a sophisticated nightlife venue in its own class. With a focus on elegance and a carefully curated atmosphere, Ritz Club offers an upscale experience. The club's central location and refined ambiance make it a premier choice for those seeking a night of sophistication, accompanied by excellent music and top-notch service."
+    }
   ]
 }
+
 `;
 const starContainer = document.createElement("div");
 starContainer.classList.add("star-container");
