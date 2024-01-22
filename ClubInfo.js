@@ -3,17 +3,18 @@ export function GenerateInformation(dt){
     sessionStorage.setItem('myData', JSON.stringify(dt));
 }
 
-
+console.log(data);
   document.addEventListener('DOMContentLoaded', () => {
     const storedData = sessionStorage.getItem('myData');
     const data = JSON.parse(storedData);
 
     const clubInfoContainer = document.getElementById('clubInfo');
+    
   
-    const adresa = data.adresa;
+    const adresa = data.address;
     const desc = data.desc;
     const imageSrc = data.image;
-    const name = "Vanilla Club";
+    const name = data.name;
   
     const htmlContent = `
       <h2>${name}</h2>

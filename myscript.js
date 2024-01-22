@@ -1,5 +1,6 @@
 
 import {GenerateInformation} from './ClubInfo.js';
+let loaded = false;
 /*import jsonData from "./data.json"
 
 export function DohvatiKlubove()
@@ -37,7 +38,7 @@ function createClubCard(data, parentDiv) {
 }
 
 
-const jsonString = `
+let jsonString = `
 {
   "clubs": [
     {
@@ -90,8 +91,16 @@ const jsonString = `
     }
   ]
 }
-
 `;
+function addToClubs(){
+  let club = JSON.parse(sessionStorage.getItem('myClub'));
+  let currJson = JSON.parse(jsonString);
+  currJson.clubs.push(club);
+  let st = JSON.stringify(currJson);
+  sessionStorage.removeItem('myClub');
+  return st;
+  
+}
 const starContainer = document.createElement("div");
 starContainer.classList.add("star-container");
 for (let i = 0; i < 5; i++) {
@@ -194,6 +203,7 @@ function getCurrentLocation() {
   }
 
 document.addEventListener('DOMContentLoaded', function () {
+  
  // Add an event listener to the button with the id 'getLocationButton'
 document.getElementById('pokazi').addEventListener('click', IsNearMe); });
 
@@ -219,11 +229,14 @@ function IsNearMe()
      
       markers[i].setVisible(true);
     }
+    
+  }
     let container = document.getElementById("myData");
-    jsonData.clubs.forEach(club => {
+    let clubs12 = JSON.parse(addToClubs());
+    console.log(clubs12);
+    clubs12.clubs.forEach(club => {
       container.appendChild(createClubCard(club,container));
     });
-  }
 }
 
   function getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2) {

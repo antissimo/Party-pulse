@@ -1,3 +1,4 @@
+
 let eventList=[];
 let clubList=[];
 
@@ -27,21 +28,24 @@ function showEventForm(){
 }
 function submitClubFun(){
     let clubNametmp = document.getElementById("clubname").value;
+    let clublontmp = document.getElementById("clublon").value;
+    let clublattmp = document.getElementById("clublat").value;
     let clubAdresstmp = document.getElementById("clubadress").value;
-    let clubCitytmp = document.getElementById("clubcity").value;
-    let clubPriceListtmp = document.getElementById("pricelist").value;
+    let clubImgtmp = document.getElementById("pricelist").value;
     let clubDescriptiontmp = document.getElementById("clubdescription").value;
-    if(!(clubNametmp&&clubAdresstmp)){
+    if(!(clubNametmp && clublontmp && clublattmp)){
         window.alert("Club name or club adress not added!");
         return;
     }
-    clubAdresstmp=clubAdresstmp.concat(", ",clubCitytmp);
     const clubtmp={
-        clubName:clubNametmp,
-        clubAdress:clubAdresstmp,
-        clubPriceList:clubPriceListtmp,
-        clubDescription:clubDescriptiontmp
+        name:clubNametmp,
+        lat:clublattmp,
+        lon:clublontmp,
+        image:clubImgtmp,
+        address:clubAdresstmp,
+        desc:clubDescriptiontmp
     }
+    sessionStorage.setItem('myClub', JSON.stringify(clubtmp));
     console.log(clubtmp);
     clubList.push(clubtmp);
     window.alert("Club sucessfuly added!")
