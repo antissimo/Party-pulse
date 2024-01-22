@@ -1,3 +1,4 @@
+import {GenerateInformation} from './ClubInfo.js';
 /*import jsonData from "./data.json"
 
 export function DohvatiKlubove()
@@ -7,14 +8,38 @@ export function DohvatiKlubove()
     // Parse the JSON string into a JavaScript object
     let parsedData = JSON.parse(jsonString);
 }*/
-// main.js
+// main.jss
 
+
+function createClubCard(data, parentDiv) {
+  const cardDiv = document.createElement("div");
+  cardDiv.classList.add("clubCard");
+
+  const image = document.createElement("img");
+  image.src = data.image;
+  cardDiv.appendChild(image);
+
+  const infoDiv = document.createElement("div");
+  infoDiv.classList.add("info");
+
+  const nameDiv = document.createElement("div");
+  nameDiv.classList.add("name");
+  nameDiv.textContent = data.name;
+
+  infoDiv.appendChild(nameDiv);
+  cardDiv.appendChild(infoDiv);
+  cardDiv.addEventListener("click", () => {
+    window.location.href = './ClubInfo.html';
+    GenerateInformation(data);
+  });
+  return cardDiv;
+}
 
 
 const jsonString = `
 {
   "clubs": [
-    {"name": "Vanilla Club","lat":43.521815,"lon":16.4319775, "image":"slikeProjekt/vanilla.jpg", "adresa":"Osmih mediteranskih igara 21"},
+    {"name": "Vanilla Club","lat":43.521815,"lon":16.4319775, "image":"slikeProjekt/vanilla.jpg", "adresa":"Osmih mediteranskih igara 21","desc":"Klub Vanilla u Splitu je popularna noćna destinacija s centralnom lokacijom. Moderni ambijent, raznolik glazbeni program i suvremeni dizajn čine ga privlačnim mjestom za provod. Bogat izbor pića, koktela te redoviti tematski događaji dodaju dinamiku klupskom iskustvu. Posjetitelji mogu očekivati ugodnu atmosferu, profesionalne barmene i raznovrsne glazbene žanrove. Klub Vanilla često organizira posebne događaje, čineći svaki posjet jedinstvenim."},
     {"name":"Kauri Club","lat":43.50833,"lon":16.47156, "image":"slikeProjekt/kauri.jpg", "adresa":"Poljička cesta 39"},
     {"name":"Club 305 A.D.","lat":43.50961,"lon":16.43747, "image":"slikeProjekt/305.jpg", "adresa":"Trogirska ul. 7"},
     {"name":"Velvet Club","lat":43.52229,"lon":16.43402, "image":"slikeProjekt/velvet.jpg", "adresa":"Put Supavla 1A"},
@@ -25,18 +50,6 @@ const jsonString = `
 `;
 
 const jsonData = JSON.parse(jsonString);
-
-function generateHtmlFromJson(jsonData) {
-  let html = '<ul>';
-
-  jsonData.clubs.forEach((club) => {
-    html += `<li><strong>${club.name}</strong>: Lat ${club.lat}, Lon ${club.lon}</li>`;
-  });
-
-  html += '</ul>';
-
-  return html;
-}
 
 //var markers=[];
 
@@ -147,17 +160,10 @@ function IsNearMe()
     const myRadius = document.getElementById("udaljenost").value;
     let s = "<p style='font-size: 15px' style= 'text-align: center'>";
 
-    for(let i = 0; i < 6; i++){
-        if(getDistanceFromLatLonInKm(myLat, myLon, jsonData.clubs[i].lat, jsonData.clubs[i].lon) < myRadius){
-        s += jsonData.clubs[i].name;
-        s += ", " + jsonData.clubs[i].adresa;
-        s += "&nbsp;<img width='35px' height='35px' class='center' src= " + "'" + jsonData.clubs[i].image + "'" + "\>";
-        s += "<br>";
-        markers[i].setVisible(true);
-    }
-    s += "<\p>";
-    document.getElementById("myData").innerHTML = s;
-}
+    let container = document.getElementById("myData");
+    jsonData.clubs.forEach(club => {
+      container.appendChild(createClubCard(club,container));
+    });
 }
 
   function getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2) {
