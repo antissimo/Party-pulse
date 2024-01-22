@@ -173,19 +173,13 @@ function IsNearMe()
         jsonData.clubs[i].lon
       ) < myRadius
     ) {
-      s += jsonData.clubs[i].name;
-      s += ", " + jsonData.clubs[i].adresa;
-      s +=
-        "&nbsp;<img width='35px' height='35px' class='center' src= " +
-        "'" +
-        jsonData.clubs[i].image +
-        "'" +
-        ">";
-      s += "<br>";
+     
       markers[i].setVisible(true);
     }
-    s += "<p>";
-    document.getElementById("myData").innerHTML = s;
+    let container = document.getElementById("myData");
+    jsonData.clubs.forEach(club => {
+      container.appendChild(createClubCard(club,container));
+    });
   }
 }
 
