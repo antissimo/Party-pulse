@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="adminclubs.css">
+    <link rel="stylesheet" href="navigation.css">
     <script src="adminclubs.js"></script>
     <title>adminclubs</title>
 </head>
@@ -22,25 +23,25 @@
 <div class="forms">
     <div class="eventform">
     <form name ="eventform" id="eventform">
-        <label for="eventname">Event Name:</label><br>
-        <input name ="eventname" id="eventname" type="text"><br>
-        <label for="selectclub">Select club where the event takes place:</label><br>
+        <label for="eventname">Event Name:</label>
+        <input name ="eventname" id="eventname" type="text">
+        <label for="selectclub">Select club where the event takes place:</label>
         <select name="selectclub" id="selectclub">
             <option value="Vannila">Vanilla</option>
             <option value="Velvet">Velvet</option>
         </select><br>
-        <label for="eventdate">Event date:</label><br>
-        <input id="eventdate" name="eventdate" type="date" min ="2023-01-01" max ="2024-31-12"><br>
-        <label for="eventtime">Event time:</label><br>
-        <input id="eventtime" name="eventtime" type="time"><br>
+        <label for="eventdate">Event date:</label>
+        <input id="eventdate" name="eventdate" type="date" min ="2023-01-01" max ="2024-31-12">
+        <label for="eventtime">Event time:</label>
+        <input id="eventtime" name="eventtime" type="time">
         <label for="dresscode">Dresscode:</label>
         <select name="dresscode" id="dresscode">
             <option value="formal">Formal</option>
             <option value="smart casual">Smart Casual</option>
             <option value="Casual">Casual</option>
         </select><br>
-        <label for="eventdescription">Event description(optional):</label><br>
-        <textarea name="eventdescription" id="eventdescription" rows=4 columns =70></textarea><br>
+        <label for="eventdescription">Event description(optional):</label>
+        <textarea name="eventdescription" id="eventdescription" rows=4 columns =70></textarea>
         <button type="button" onclick="submitEventFun()" id="submitevent">Submit<br>
 
     </form>
@@ -48,21 +49,21 @@
     <div class="forms">
         <div class="clubform">
 <form name="clubform" id="clubform">
-     <label for="clubname">Club name:</label><br>
-     <input name="clubname" id="clubname" type="text"><br>
-     <label for="clubadress">Club address:</label><br>
-     <input name="clubadress" id="clubadress" type="text"><br>
+     <label for="clubname">Club name:</label>
+     <input name="clubname" id="clubname" type="text">
+     <label for="clubadress">Club address:</label>
+     <input name="clubadress" id="clubadress" type="text">
      
-     <label for="clublat">Latitude:</label><br>
-     <input name="clublon" id="clublat" type="text"><br>
-     <label for="clublon">Longidute:</label><br>
-     <input name="clublon" id="clublon" type="text"><br>
+     <label for="clublat">Latitude:</label>
+     <input name="clublon" id="clublat" type="text">
+     <label for="clublon">Longidute:</label>
+     <input name="clublon" id="clublon" type="text">
 
-     <label for="pricelist">Import a club image link:</label><br>
-     <input name="clublon" id="pricelist" type="text"><br>
-     <label for="clubdescription">Write description (optional):</label><br>
-     <textarea id="clubdescription" name="clubdescription"rows = 4 columns = 70></textarea><br>
-     <button type="button" onclick="submitClubFun()" id="submitclub">Submit<br>
+     <label for="pricelist">Import a club image link:</label>
+     <input name="clublon" id="pricelist" type="text">
+     <label for="clubdescription">Write description (optional):</label>
+     <textarea id="clubdescription" name="clubdescription"rows = 4 columns = 70></textarea>
+     <button type="button" onclick="submitClubFun()" id="submitclub">Submit
 </form>
 </div>
 </div>

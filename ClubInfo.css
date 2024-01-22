@@ -2,6 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 10;
+    margin-top: 55px;
   }
   
   .club-info {
@@ -23,7 +24,7 @@ body {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    background-color: #3498db;
+    background-color: #726f64bc;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -31,5 +32,5 @@ body {
   }
   
   button:hover {
-    background-color: #2980b9;
+    background-color: #333536;
   }

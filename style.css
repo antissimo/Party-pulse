@@ -1,7 +1,7 @@
 body {
-  background: linear-gradient(to bottom, #ffffff 0%, #9999ff 100%);
+  background: rgba(156, 139, 139, 0.332);
   /* Neutral background color */
-  color: #6a0dad;
+  color: #726f64bc;
   /* Purple text color */
   font-family: 'cursive', cursive;
   /* Use cursive font */
@@ -16,7 +16,7 @@ body {
   /* Make the body take up the full height of the viewport */
   margin: 20px;
   /* Add margin to create space between content and frame */
-  border: 5px solid #61174a;
+  border: 5px solid #726f64bc;
   /* Border style */
   padding: 10px;
   /* Padding inside the frame */
@@ -39,7 +39,7 @@ body {
   }
 
   50% {
-    border-color: #763e76;
+    border-color: #726f64bc;
     /* Magenta color */
   }
 
@@ -52,19 +52,19 @@ body {
 h1,
 h2,
 h3 {
-  color: #4d0082;
+  color: #726f64bc;
   /* Darker purple for headings */
   margin-bottom: 10px;
   /* Add bottom margin to headings */
 }
 
 a {
-  color: #800080;
+  color: #726f64bc;
   /* Purple color for links */
 }
 
 button {
-  background-color: #800080;
+  background-color: #726f64bc;
   /* Purple background color */
   color: #ffffff;
   /* White text color */
@@ -84,7 +84,7 @@ button {
 
 /* Button hover effect */
 button:hover {
-  background-color: #6a0dad;
+  background-color: #4b4a45bc;
   /* Darker purple on hover */
 }
 
@@ -99,7 +99,7 @@ button:hover {
 input {
   padding: 10px;
   /* Padding for the input fields */
-  border: 2px solid #800080;
+  border: 2px solid #726f64bc;
   /* Purple border */
   border-radius: 5px;
   /* Add a slight border-radius for rounded corners */
@@ -113,7 +113,7 @@ input {
 input:focus {
   outline: none;
   /* Remove default focus outline */
-  border-color: #6a0dad;
+  border-color: #726f64bc;
   /* Change border color on focus */
 }
 

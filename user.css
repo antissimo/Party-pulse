@@ -26,10 +26,17 @@ input, button {
     padding: 8px;
     margin-bottom: 16px;
     box-sizing: border-box;
-    border-color: rgba(88, 88, 88, 0.1);
+    border-color: rgba(2, 2, 2, 0.1);
+    font-weight: 200;
+    color: rgba(0, 0, 0, 0.983)
 }
+
+::placeholder{
+    color:black;
+}
+
 button {
-    background-color: #800080;
+    background-color: #726f64bc;
     color: #fff;
     padding: 10px;
     border-radius: 4px;
@@ -39,8 +46,8 @@ button {
 button.clicked{
     border-style: solid;
     background-color: #ebc6eb;
-    border-color: #740a74 ;
-    color: #800080;
+    border-color: #51514fbc ;
+    color: #51514fbc;
 }
 
 #profileImageContainer {

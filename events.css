@@ -1,19 +1,28 @@
 body {
     font-family: 'Arial', sans-serif;
     text-align: center;
-    background-color: #fff;
+    background-color: #717070;
+    background-image: url("booking.jpg");
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     margin-top: 75px;
 }
-
 h1 {
-    color: #333;
+    
+    color: #5e5858;
+    font-weight: 600;
+    background-color: #d1d0d0;
+    width: max-content;
+    justify-items: center;
+    margin: auto;
+    padding: 6px;
+    border-radius: 10px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .event {
-    background-color: #fff;
+    background-color: #2a210547;
     border: 1px solid #ddd;
     margin: 20px auto;
     margin-bottom: 20px;
@@ -30,11 +39,14 @@ h1 {
 }
 
 h2 {
-    color: #800080;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: oblique;
+    padding-left:0px;
 }
 
 p {
-    color: #555;
+    color: white;
 }
 
 .event .star-container {
@@ -60,5 +72,20 @@ p {
 
 .fa-star-o {
     color: rgb(41, 35, 35);
+}
+
+.event button{
+    border-radius: 12px;
+    background-color: rgba(245, 245, 220, 0.669);
+    font-style:normal;
+    font-weight: 500;
+    height: 50px;
+    width: 150px;
+    font-size: larger;
+}
+
+.event button:hover{
+    cursor: pointer;
+    background-color: #3333338b;
 }
 

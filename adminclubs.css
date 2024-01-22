@@ -1,85 +1,132 @@
-/* Reset some default styles for better consistency */
-body, h1, h2, p, div, form, button {
+
+
+  /* Reset some default styles */
+  body, h1, h2, p, ul, li {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    margin-top: 100px;
   }
   
-  /* Set some basic styles for the body */
   body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
-    color: #333;
   }
   
-  /* Container for the whole page */
   .container {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 800px;
+    margin: 20px auto;
     padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
   }
   
-  /* Style for the tabs container */
-  .tab {
+  .tabs {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: lightpink;
-    padding: 10px;
-    color: #fff;
+    margin-bottom: 20px;
   }
   
-  /* Style for the buttons container */
-  .buttons-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
-  
-  /* Style for individual buttons */
-  #eventButton {
-    padding: 10px 20px;
-    margin: 0 10px;
-    background-color:#800080 ;
+  .navButtons {
+    background-color: #3498db;
     color: #fff;
     border: none;
+    padding: 10px 15px;
     cursor: pointer;
-  }
-  #clubButton{
-    padding: 10px 20px;
-    margin: 0 10px;
-    background-color: #800080;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
-  
-  /* Style for the forms container */
-  .forms {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-  }
-  
-  /* Style for the clubform on the right */
-  .clubform {
-    flex: 1;
+    border-radius: 5px;
     margin-right: 10px;
   }
   
-  /* Style for the eventform on the left */
-  .eventform {
-    flex: 1;
-    margin-left: 10px;
+  .buttons-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
   }
   
-  /* Add more specific styles to your forms, buttons, etc. as needed */
-  .tablinks{
-    padding: 5px 10px;
-    margin: 0 5px;
-    background-color:#800080 ;
+  button {
+    background-color: #2ecc71;
     color: #fff;
     border: none;
+    padding: 10px 15px;
     cursor: pointer;
+    border-radius: 5px;
   }
   
+  .forms {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  form {
+    width: 45%;
+  }
+  
+  label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  
+  input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  #submitevent:hover, #submitclub:hover {
+    background-color: #726f64bc
+  }
+  
+  .eventform {
+    width: 70%;
+    margin: 0 auto; /* Center the form */
+    padding-left: 100px;
+  }
+  
+  #clubform{
+    width: 70%;
+    margin: 0 auto; /* Center the form */
+    padding-right: 200px;
+    
+  }
+  
+  #eventButton{
+    transform: translate(-55%);
+    background-color: #726f64bc;
+  }
+
+  #clubButton{
+    background-color: #726f64bc;
+  }
+  
+  .forms{
+  background-color: beige;
+  }
+
+  #submitclub{
+    background-color: #726f64bc;
+  }
+
+  #submitevent{
+    background-color: #726f64bc;
+  }
+
+  #eventButton:hover {
+    background-color: #171718;
+  }
+
+  #clubButton:hover{
+    background-color:  #171718;
+  }
+  
+  #submitclub:hover{
+    background-color: #171718;
+  }
+
+  #submitevent:hover{
+    background-color: #171718;
+  }

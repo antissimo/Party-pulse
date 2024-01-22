@@ -3,7 +3,7 @@ export function GenerateInformation(dt){
     sessionStorage.setItem('myData', JSON.stringify(dt));
 }
 
-console.log(data);
+//console.log(data);
   document.addEventListener('DOMContentLoaded', () => {
     const storedData = sessionStorage.getItem('myData');
     const data = JSON.parse(storedData);
