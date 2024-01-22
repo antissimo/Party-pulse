@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="./reservations.js"></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='./reservations.css'>
+</head>
+
+<form>
+    <h1>Reservations</h1>
+    <div class="multiselect">
+      <div class="selectBox">
+        <div class="overSelect"></div>
+      </div>
+      <div id="checkboxes">
+        <label for="one">  
+          <input type="radio" name="stol" id="one" checked="true"/>Regular table</label>
+          <br>
+        <label for="two">
+          <input type="radio" name="stol" id="two" />Regular table upper floor</label>
+          <br>
+        <label for="three">
+          <input type="radio" name="stol" id="three" disabled readonly />Regular table near stage <br>  <i>(no tables available)</i></label>
+          <br>
+        <label for="four">
+          <input type="radio" name="stol" id="four" />VIP table</label>
+          <br>
+        <label for="five">
+          <input type="radio" name="stol" id="five" />VIP table upper floor</label>
+          <br>
+      </div>
+    </div>
+  </form>
+<br><br>
+
+<ul>
+    <label>Points based on money spent</label>
+    <li> 70,00€ - 129,99€ - 10 points</li><br>
+    <li> 130,00€ - 179,99€ - 25 points</li><br>
+    <li> 180,00€ - 229,99€ - 35 points</li><br>
+    <li> 230,00€ - 299,99€ - 45 points</li><br>
+    <li> > 300€ - 60 points</li><br>
+</ul>
+<br>
+
+
+<button type="submit">Reserve</button>
+
+<div id="a" hidden></div>
+
+</body>
+</html>

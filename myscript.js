@@ -1,3 +1,4 @@
+
 import {GenerateInformation} from './ClubInfo.js';
 /*import jsonData from "./data.json"
 
@@ -48,17 +49,21 @@ const jsonString = `
   ]
 }
 `;
-
+const starContainer = document.createElement("div");
+starContainer.classList.add("star-container");
+for (let i = 0; i < 5; i++) {
+  const starIcon = document.createElement("i");
+  starIcon.classList.add("fa", "fa-star", "star-icon");
+  starContainer.appendChild(starIcon);
+}
 const jsonData = JSON.parse(jsonString);
-
 //var markers=[];
 
 // Koristi funkciju za generiranje HTML-a i postavi ga u element s ID-om 'clubs-list'
 //document.getElementById('clubs-list').innerHTML = generateHtmlFromJson(jsonData);
 
 var markers = [];
-function initMap() 
-  {
+function initMap() {
     const myLatlng = { lat:  43.508133, lng: 16.440193};
     const map = new google.maps.Map(document.getElementById("map"), {
       zoom: 13,
@@ -116,8 +121,8 @@ function initMap()
     markers[5].setVisible(false);
   
   }
-  
-  window.initMap = initMap;
+
+window.initMap = initMap;
 
 
 function getCurrentLocation() {
@@ -155,15 +160,33 @@ document.getElementById('pronadi').addEventListener('click', getCurrentLocation)
    
 function IsNearMe()
 {
-    const myLat = 43.6206134;
-    const myLon = 16.73527;
-    const myRadius = document.getElementById("udaljenost").value;
-    let s = "<p style='font-size: 15px' style= 'text-align: center'>";
-
-    let container = document.getElementById("myData");
-    jsonData.clubs.forEach(club => {
-      container.appendChild(createClubCard(club,container));
-    });
+  const myLat = 43.6206134;
+  const myLon = 16.73527;
+  const myRadius = document.getElementById("udaljenost").value;
+  let s = "<p style='font-size: 15px' style= 'text-align: center'>";
+  for (let i = 0; i < 6; i++) {
+    if (
+      getDistanceFromLatLonInKm(
+        myLat,
+        myLon,
+        jsonData.clubs[i].lat,
+        jsonData.clubs[i].lon
+      ) < myRadius
+    ) {
+      s += jsonData.clubs[i].name;
+      s += ", " + jsonData.clubs[i].adresa;
+      s +=
+        "&nbsp;<img width='35px' height='35px' class='center' src= " +
+        "'" +
+        jsonData.clubs[i].image +
+        "'" +
+        ">";
+      s += "<br>";
+      markers[i].setVisible(true);
+    }
+    s += "<p>";
+    document.getElementById("myData").innerHTML = s;
+  }
 }
 
   function getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2) {
